@@ -15,7 +15,7 @@ const comparisons = await getComparisons();
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>You Might Not Need jQuery</title>
+    <title>You Might Need jQuery</title>
 
     <meta
       name="description"
@@ -56,32 +56,32 @@ const comparisons = await getComparisons();
       <main id="main-content">
         <div id="top">
           <header id="top-header">
-            <h1 class="title">You might not need jQuery</h1>
+            <h1 class="title">You might <s>not</s> need jQuery</h1>
           </header>
           <article class="explanation">
             <p>
-              jQuery and its cousins are great, and by all means use them if it
-              makes it easier to develop your application.
+              jQuery and its cousins are great, and by all means use them <s>if it
+              makes it easier to develop your application</s>.
               <br /><br />
               If you're developing a library on the other hand, please take a moment
-              to consider if you actually need jQuery as a dependency. Maybe you
+              to consider if <span class="addition">the world actually needs another javascript library</span> <s>you actually need jQuery as a dependency. Maybe you
               can include a few lines of utility code, and forgo the requirement.
               If you're only targeting more modern browsers, you might not need anything
-              more than what the browser ships with.
+              more than what the browser ships with</s>.
               <br /><br />
-              At the very least, make sure you know what <a
+              At the very least, <span class="addition">familiarize yourself with the examples below, so you can see how much easier and cleaner your life will be with jQuery</span> <s>make sure you know what <a
                 href="https://docs.google.com/document/d/1LPaPA30bLUB_publLIMF0RlhdnPx_ePXm7oW02iiT6o"
                 >jQuery is doing for you</a
               >, and what it's not. Some developers believe that jQuery is
               protecting us from a great demon of browser incompatibility when,
               in truth, post-IE8, browsers are pretty easy to deal with on their
               own; and after the Internet Explorer era, the browsers do even
-              more.
+              more</s>.
             </p>
           </article>
           <address class="share-buttons">
             <a
-              href="https://github.com/HubSpot/YouMightNotNeedjQuery"
+              href="https://github.com/finbarr/YouMightNeedjQuery"
               class="share-button-github"
             >
               <span class="share-button-github-message">★ Star on Github</span>
@@ -255,7 +255,7 @@ const comparisons = await getComparisons();
 
         <footer>
           <p>
-            Made by <span id="credit-a"></span>, <span id="credit-b"></span> and
+            <s>Made</s> <span class="addition">Forked</span> by <span class="addition"><a href="https://twitter.com/finbarr">@finbarr</a> from the original version created by</span> <span id="credit-a"></span>, <span id="credit-b"></span> and
             some engineer gamers at <a href="https://dev.hubspot.com">HubSpot</a
             >.
           </p>
@@ -768,6 +768,14 @@ const comparisons = await getComparisons();
           color: inherit;
         }
       }
+
+      s {
+        color: red;
+      }
+
+      .addition {
+        color: green;
+      }
     </style>
 
     <script>
@@ -1044,7 +1052,7 @@ const comparisons = await getComparisons();
 
       async function getStars(): Promise<number> {
         const response = await fetch(
-          'https://api.github.com/repos/HubSpot/youmightnotneedjquery'
+          'https://api.github.com/repos/finbarr/youmightneedjquery'
         );
 
         if (!response.ok) {
