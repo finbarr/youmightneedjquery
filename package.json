@@ -10,7 +10,7 @@
     "@sindresorhus/class-names": "^2.0.0",
     "@types/node": "^18.7.16",
     "astro": "^1.1.7",
-    "astro-compress": "^1.0.7",
+    "astro-compress": "",
     "modern-normalize": "^1.1.0",
     "prettier": "^2.7.1",
     "prettier-plugin-astro": "^0.5.4",
